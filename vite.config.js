@@ -2,7 +2,7 @@
  * @Author: zaqvil
  * @Date: 2021-08-09 16:32:52
  * @FilePath: \cli\vite-vue3-template\vite.config.js
- * @LastEditTime: 2021-08-09 16:40:16
+ * @LastEditTime: 2021-08-10 12:26:29
  * @LastEditors: zaqvil
  */
 import { defineConfig } from 'vite'
@@ -22,7 +22,8 @@ export default defineConfig({
       },
     },
     build: {
-      output:{
+    terserOptions: { compress: { drop_console: true } },
+    output:{
         manualChunks: {
           vue: ['vue'],
           axios: ['axios'],
